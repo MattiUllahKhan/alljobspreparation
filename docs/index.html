@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO PRIMARY -->
-  <title>AJP App - All Jobs Preparation | Official Beta Download</title>
-  <meta name="description" content="Get the AJP App for advanced job test preparation in Pakistan. Specialized MCQs for PAF, Navy, ASF, PPSC, and FPSC. Download the official early access beta today.">
-  <meta name="keywords" content="AJP App, job preparation Pakistan, PPSC test app, FPSC preparation, PAF initial test, Navy test prep, ASF jobs, educational APK">
+  <!-- SEO PRIMARY META -->
+  <title>AJP App: All Jobs Preparation APK for Pakistani Students (Official Beta)</title>
+  <meta name="description" content="Download the official AJP App. The ultimate Android tool for PAF, ASF, Navy, PPSC, and FPSC test preparation. Get the early access beta for Pakistani job exams.">
+  <meta name="keywords" content="AJP App, All Jobs Preparation APK, PPSC Prep, FPSC Test, PAF Initial Test, Navy Job Prep, ASF Preparation App Pakistan">
   <meta name="author" content="Matti Ullah Khan">
   
-  <!-- OPEN GRAPH & CANONICAL -->
-  <link rel="canonical" href="https://mattiullahkhan.github.io/alljobspreparation/">
-  <meta property="og:title" content="AJP App - Your Career Starts Here">
-  <meta property="og:description" content="Official beta release for Pakistan's most comprehensive job preparation tool.">
-  <meta property="og:image" content="https://mattiullahkhan.github.io/alljobspreparation/preview.png">
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:title" content="AJP - All Jobs Preparation App (Beta)">
+  <meta property="og:description" content="Master your job exams with the AJP App. Download the latest APK for comprehensive study modules.">
+  <meta property="og:url" content="https://mattiullahkhan.github.io/alljobspreparation/">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://mattiullahkhan.github.io/alljobspreparation/">
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- STRUCTURED DATA -->
+  <!-- SCHEMA.ORG (GOOGLE SEARCH RICH RESULTS) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,7 +31,12 @@
     "operatingSystem": "Android",
     "applicationCategory": "EducationalApplication",
     "downloadUrl": "https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk",
-    "author": { "@type": "Person", "name": "Matti Ullah Khan" }
+    "softwareVersion": "v0.1.0-beta",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "PKR"
+    }
   }
   </script>
 
@@ -42,8 +47,8 @@
       --color-secondary: 22 163 74;
       --bg: #ffffff;
       --surface: #f8fafc;
-      --text: #1e293b;
-      --text-light: #64748b;
+      --text-main: #1e293b;
+      --text-dim: #64748b;
       --border: #e2e8f0;
     }
 
@@ -54,70 +59,65 @@
         --color-secondary: 74 222 128;
         --bg: #020617;
         --surface: #0f172a;
-        --text: #f1f5f9;
-        --text-light: #94a3b8;
+        --text-main: #f1f5f9;
+        --text-dim: #94a3b8;
         --border: #1e293b;
       }
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Roboto', sans-serif;
       background-color: var(--bg);
-      color: var(--text);
+      color: var(--text-main);
+      line-height: 1.6;
       overflow-x: hidden;
-      line-height: 1.5;
     }
 
-    h1, h2, h3, .logo { font-family: 'Google Sans', sans-serif; }
+    h1, h2, .logo { font-family: 'Google Sans', sans-serif; letter-spacing: -0.5px; }
 
     /* HEADER */
     header {
-      padding: 1.2rem 5%;
+      padding: 1.25rem 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
+      border-bottom: 1px solid var(--border);
       background: rgba(var(--bg) / 0.8);
       backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      border-bottom: 1px solid var(--border);
     }
 
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: rgb(var(--color-primary));
       text-decoration: none;
-      letter-spacing: -0.5px;
     }
 
     /* HERO SECTION */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 85vh;
+      grid-template-columns: 1.2fr 0.8fr;
+      min-height: 80vh;
       align-items: center;
       padding: 0 8%;
-      gap: 2rem;
-    }
-
-    @media (max-width: 968px) {
-      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 4rem; }
-      .cta-group { justify-content: center; }
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .badge {
+      display: inline-block;
+      padding: 6px 16px;
       background: rgba(var(--color-primary) / 0.1);
       color: rgb(var(--color-primary));
-      padding: 6px 16px;
       border-radius: 100px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 500;
       margin-bottom: 1.5rem;
-      display: inline-block;
     }
 
     h1 {
@@ -127,119 +127,139 @@
       font-weight: 700;
     }
 
-    .description {
+    .hero p {
       font-size: 1.2rem;
-      color: var(--text-light);
+      color: var(--text-dim);
       margin-bottom: 2.5rem;
-      max-width: 550px;
+      max-width: 580px;
     }
 
-    /* JOYFUL ANIMATION PART */
-    .joy-container {
+    /* DOWNLOAD BUTTON */
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgb(var(--color-secondary));
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 36px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 25px -5px rgba(var(--color-secondary) / 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px -5px rgba(var(--color-secondary) / 0.5);
+    }
+
+    /* JOYFUL VISUAL (Floating Achievement Sphere) */
+    .visual-area {
       position: relative;
-      height: 450px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .floating-shape {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      z-index: -1;
-      opacity: 0.4;
-      animation: float 10s infinite alternate;
-    }
-
-    .shape-1 {
-      width: 300px; height: 300px;
-      background: rgb(var(--color-primary));
-      top: 10%; left: 10%;
-    }
-
-    .shape-2 {
-      width: 250px; height: 250px;
-      background: rgb(var(--color-secondary));
-      bottom: 10%; right: 10%;
-      animation-delay: -5s;
-    }
-
-    /* ICON GALAXY */
-    .icon-box {
-      background: var(--surface);
-      padding: 20px;
-      border-radius: 24px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      border: 1px solid var(--border);
+    .sphere {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 70%;
+      animation: morph 8s linear infinite alternate, spin 20s linear infinite;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      animation: hoverCard 4s infinite ease-in-out;
-    }
-
-    .icon-row { display: flex; gap: 15px; justify-content: center; }
-    .emoji { font-size: 2rem; }
-
-    @keyframes float {
-      from { transform: translate(0, 0) scale(1); }
-      to { transform: translate(20px, 40px) scale(1.1); }
-    }
-
-    @keyframes hoverCard {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(2deg); }
-    }
-
-    /* BUTTONS */
-    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    .btn {
-      padding: 16px 32px;
-      border-radius: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.1rem;
-      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
+      box-shadow: 0 0 50px rgba(var(--color-primary) / 0.3);
     }
 
-    .btn-primary {
-      background: rgb(var(--color-secondary));
+    .sphere-content {
       color: white;
-      box-shadow: 0 8px 20px rgba(var(--color-secondary) / 0.3);
+      text-align: center;
+      animation: counter-spin 20s linear infinite;
     }
 
-    .btn-primary:hover { transform: scale(1.05); filter: brightness(1.1); }
+    @keyframes morph {
+      0% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+      100% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+    }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes counter-spin { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
 
     /* FEATURES */
-    .features { padding: 5rem 8%; background: var(--surface); }
-    .feat-grid {
+    .features {
+      padding: 6rem 8%;
+      background: var(--surface);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .feat-card {
+    .card {
       background: var(--bg);
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 24px;
       border: 1px solid var(--border);
+      transition: 0.3s;
     }
 
-    .feat-card h3 { color: rgb(var(--color-primary)); margin-bottom: 1rem; }
+    .card:hover {
+      border-color: rgb(var(--color-primary));
+      transform: translateY(-5px);
+    }
 
+    .card h3 {
+      color: rgb(var(--color-primary));
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER (Professional & Unified) */
     footer {
       padding: 4rem 8% 2rem;
-      text-align: center;
       border-top: 1px solid var(--border);
-      color: var(--text-light);
-      font-size: 0.9rem;
+      text-align: center;
     }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover { color: rgb(var(--color-primary)); }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* MOBILE ADJUSTMENTS */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 3rem; }
+      .hero p { margin: 0 auto 2.5rem; }
+      .visual-area { order: -1; margin-bottom: 3rem; }
+      .sphere { width: 200px; height: 200px; }
+    }
   </style>
 </head>
 
@@ -247,99 +267,66 @@
 
   <header>
     <a href="#" class="logo">AJP</a>
-    <div style="font-size: 0.8rem; font-weight: 500; opacity: 0.7;">BETA v0.1.0</div>
+    <div style="font-weight: 500; font-size: 0.9rem; color: var(--text-dim);">v0.1.0-beta</div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <span class="badge">🚀 Smart Preparation for a Bright Career</span>
-        <h1>Unlock Your Future with AJP</h1>
-        <p class="description">
-          The all-in-one educational toolkit for Pakistani students. Master the tests for <b>PAF, Navy, ASF, PPSC,</b> and more with a joyful learning experience.
+      <article>
+        <span class="badge">Early Access Beta for Pakistani Students</span>
+        <h1>All Jobs Preparation App</h1>
+        <p>
+          Master your competitive exams for <strong>PAF, Navy, ASF, PPSC,</strong> and <strong>FPSC</strong>. 
+          The AJP App provides precision-targeted MCQs and daily learning modules designed for success in Pakistan's job sector.
         </p>
-        
-        <div class="cta-group">
-          <a href="https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk" class="btn btn-primary">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download Beta APK
-          </a>
-        </div>
-      </div>
+        <a href="https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk" class="btn-download" title="Download AJP Android APK">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download Beta APK
+        </a>
+      </article>
 
-      <div class="joy-container">
-        <!-- Abstract Shapes -->
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        
-        <!-- Joyful Content -->
-        <div class="icon-box">
-          <div class="icon-row">
-            <span class="emoji">🎓</span>
-            <span class="emoji">🎖️</span>
-          </div>
-          <div class="icon-row" style="padding: 0 20px;">
-            <div style="text-align: center;">
-              <div style="font-weight: 900; font-size: 2rem; color: rgb(var(--color-primary));">100%</div>
-              <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light);">Preparation</div>
-            </div>
-          </div>
-          <div class="icon-row">
-            <span class="emoji">📚</span>
-            <span class="emoji">✅</span>
-          </div>
-          <div style="text-align: center; font-family: 'Google Sans'; font-weight: 500;">
-            Success awaits you
+      <div class="visual-area">
+        <div class="sphere" role="img" aria-label="Joyful Achievement Decoration">
+          <div class="sphere-content">
+            <div style="font-size: 3rem;">🎓</div>
+            <div style="font-weight: 700; font-family: 'Google Sans';">SUCCESS</div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="features">
-      <div class="feat-grid">
-        <div class="feat-card">
-          <h3>Uniform Forces</h3>
-          <p>Specially curated intelligence and academic tests for PAF, Navy, and ASF aspirants.</p>
+      <div class="section-title">
+        <h2>Specialized Preparation Modules</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>Forces Initial Tests</h3>
+          <p>Complete academic and intelligence test preparation for Pakistan Air Force, Navy, and Airport Security Force.</p>
         </div>
-        <div class="feat-card">
-          <h3>Government Jobs</h3>
-          <p>Comprehensive MCQ banks for PPSC and FPSC competitive exams including ASI and Sub-Inspector roles.</p>
+        <div class="card">
+          <h3>PPSC & FPSC Exams</h3>
+          <p>Updated MCQ database for Sub-Inspector, ASI, Lecturer, and general recruitment tests in Punjab and Federal departments.</p>
         </div>
-        <div class="feat-card">
-          <h3>Daily Progress</h3>
-          <p>Track your learning and improve your speed with our optimized beta testing tools.</p>
+        <div class="card">
+          <h3>Interactive Learning</h3>
+          <p>Clean Material Design interface that keeps you focused on your goals without distractions.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 20px;">
-      <a href="https://github.com/MattiUllahKhan" style="text-decoration: none; color: inherit;">GitHub</a>
-      <span>•</span>
-      <a href="#" style="text-decoration: none; color: inherit;">Feedback</a>
-    </div>
-    <p>© 2026 Matti Ullah Khan. All Jobs Preparation App.</p>
-    <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">Designed with Google Material 3 Guidelines.</p>
-  </footer>
-
-</body>
-</html>luences the final features and tools of the AJP ecosystem.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-links">
+    <nav class="footer-links">
+      <a href="https://github.com/MattiUllahKhan">GitHub Repository</a>
       <a href="#">Privacy Policy</a>
-      <a href="#">Release Notes</a>
-      <a href="https://github.com/MattiUllahKhan">GitHub</a>
-      <a href="#">Contact Developer</a>
-    </div>
+      <a href="#">Technical Support</a>
+    </nav>
     <div class="copyright">
-      © 2026 Matti Ullah Khan. Built with Google Material Design principles.<br>
-      Not an official government application.
+      © 2026 Matti Ullah Khan • All Jobs Preparation (AJP)<br>
+      <span style="opacity: 0.6; font-size: 0.75rem; display: block; margin-top: 8px;">
+        Designed with Google Material 3. Not an official government entity.
+      </span>
     </div>
   </footer>
 
