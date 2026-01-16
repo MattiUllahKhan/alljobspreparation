@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- BASIC META -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All Jobs Preparation AJP – Early Access Beta | Educational Android App</title>
-
-  <!-- SEO META -->
-  <meta name="description"
-        content="AJP App is an educational Android application released as an early access beta for Pakistani students. Download the official APK for testing, learning, and feedback.">
-  <meta name="keywords"
-        content="AJP app, education app, android AJP app, student tools, educational apk, beta android app, All Jobs Preparation App">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO PRIMARY -->
+  <title>AJP App Download - All Jobs Preparation (Early Access Beta)</title>
+  <meta name="description" content="Official AJP (All Jobs Preparation) APK for Pakistani students. Prepare for PAF, ASF, Navy, PPSC, and FPSC exams with our advanced educational Android tools.">
+  <meta name="keywords" content="AJP App, All Jobs Preparation APK, PPSC prep app, FPSC test Pakistan, PAF test prep, ASF job application, Android Education App">
   <meta name="author" content="Matti Ullah Khan">
   <meta name="robots" content="index, follow">
-
-  <!-- CANONICAL -->
-  <link rel="canonical"
-        href="https://mattiullahkhan.github.io/alljobspreparation/">
-
-  <!-- OPEN GRAPH (FACEBOOK, LINKEDIN) -->
+  
+  <!-- CANONICAL & SOCIAL -->
+  <link rel="canonical" href="https://mattiullahkhan.github.io/alljobspreparation/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AJP App – Early Access Beta">
-  <meta property="og:description"
-        content="Early access beta release of AJP App for Pakistani students. Download the official APK and help improve the app.">
-  <meta property="og:url"
-        content="https://mattiullahkhan.github.io/alljobspreparation/">
-  <meta property="og:image"
-        content="https://mattiullahkhan.github.io/alljobspreparation/preview.png">
-
-  <!-- TWITTER -->
+  <meta property="og:title" content="AJP App - All Jobs Preparation (Pakistan)">
+  <meta property="og:description" content="Download the early access beta of AJP App for comprehensive job test preparation.">
+  <meta property="og:image" content="https://mattiullahkhan.github.io/alljobspreparation/preview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AJP App – Early Access Beta">
-  <meta name="twitter:description"
-        content="Download the early access beta APK of AJP App for students.">
-  <meta name="twitter:image"
-        content="https://mattiullahkhan.github.io/alljobspreparation/preview.png">
 
-  <!-- STRUCTURED DATA (GOOGLE) -->
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- STRUCTURED DATA (SEO PROOF) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "AJP App",
+    "@type": "SoftwareApplication",
+    "name": "AJP - All Jobs Preparation",
     "operatingSystem": "Android",
     "applicationCategory": "EducationalApplication",
+    "downloadUrl": "https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk",
+    "softwareVersion": "v0.1.0-beta",
     "offers": {
       "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+      "price": "0.00",
+      "priceCurrency": "PKR"
     },
     "author": {
       "@type": "Person",
@@ -56,113 +46,308 @@
   }
   </script>
 
-  <!-- STYLES -->
   <style>
+    :root {
+      /* 🔵 Light Mode: Deep Navy & Standard Green */
+      --color-primary: 30 58 138;
+      --color-secondary: 22 163 74;
+      --bg-color: #ffffff;
+      --surface-color: #f8fafc;
+      --text-main: #1e293b;
+      --text-dim: #64748b;
+      --border-color: #e2e8f0;
+      --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* 🌙 Dark Mode: Bright Sky Blue & Neon Green */
+        --color-primary: 96 165 250;
+        --color-secondary: 74 222 128;
+        --bg-color: #020617;
+        --surface-color: #0f172a;
+        --text-main: #f1f5f9;
+        --text-dim: #94a3b8;
+        --border-color: #1e293b;
+        --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+      }
+    }
+
+    * { box-sizing: border-box; transition: background 0.3s ease, color 0.3s ease; }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, #020617, #0f172a);
-      color: #e5e7eb;
+      font-family: 'Roboto', system-ui, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
       min-height: 100vh;
     }
 
-    .container {
-      background: #020617;
-      padding: 2.8rem;
-      border-radius: 16px;
-      max-width: 520px;
-      width: 100%;
-      box-shadow: 0 25px 50px rgba(0,0,0,.6);
+    h1, h2, h3, .logo {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    /* HEADER */
+    header {
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(var(--bg-color) / 0.8);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+      text-decoration: none;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .app-specs { justify-content: center; }
+    }
+
+    .app-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(var(--color-primary) / 0.15);
+      color: rgb(var(--color-primary));
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      text-align: center;
-      font-size: 1.9rem;
-      margin-bottom: .4rem;
+      font-size: 3.5rem;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.1;
+      letter-spacing: -1px;
     }
 
-    .badge {
-      display: block;
-      width: fit-content;
-      margin: .8rem auto 1.2rem;
-      background: #f59e0b;
-      color: #020617;
-      padding: .35rem .8rem;
-      border-radius: 8px;
-      font-size: .75rem;
-      font-weight: 700;
+    .description {
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
     }
 
-    p {
-      text-align: center;
-      color: #cbd5f5;
-      font-size: .95rem;
-      line-height: 1.6;
+    /* CALL TO ACTION */
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
     }
 
-    .download {
-      display: block;
-      background: #22c55e;
-      color: #020617;
+    @media (max-width: 850px) { .cta-group { justify-content: center; flex-direction: column; } }
+
+    .btn-main {
+      background-color: rgb(var(--color-secondary));
+      color: #ffffff;
       text-decoration: none;
-      text-align: center;
-      padding: 1rem;
+      padding: 16px 32px;
       border-radius: 12px;
       font-weight: 700;
-      margin-top: 1.8rem;
-      transition: transform .15s ease, background .15s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 14px rgba(var(--color-secondary) / 0.4);
+      transition: transform 0.2s;
     }
 
-    .download:hover {
-      background: #16a34a;
-      transform: translateY(-1px);
+    .btn-main:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.1);
     }
 
-    .meta {
-      margin-top: 1.4rem;
-      font-size: .75rem;
-      color: #94a3b8;
-      text-align: center;
+    /* APP SPECS */
+    .app-specs {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
     }
 
+    .spec-item { display: flex; flex-direction: column; }
+    .spec-label { font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700; }
+    .spec-value { font-size: 1rem; font-weight: 500; }
+
+    /* IMAGE / MOCKUP */
+    .mockup-container {
+      position: relative;
+      background: var(--surface-color);
+      border-radius: 32px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+    }
+
+    .mockup-placeholder {
+      width: 100%;
+      aspect-ratio: 9/16;
+      background: linear-gradient(45deg, rgba(var(--color-primary)/0.2), rgba(var(--color-secondary)/0.2));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: rgb(var(--color-primary));
+    }
+
+    /* FEATURES GRID */
+    .features {
+      background-color: var(--surface-color);
+      padding: 5rem 5%;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--bg-color);
+      padding: 2.5rem;
+      border-radius: 24px;
+      border: 1px solid var(--border-color);
+      transition: 0.3s;
+    }
+
+    .card:hover { border-color: rgb(var(--color-primary)); }
+
+    .card h3 { color: rgb(var(--color-primary)); margin-top: 0; }
+
+    /* FOOTER */
     footer {
-      margin-top: 2rem;
+      margin-top: auto;
+      padding: 4rem 5% 2rem;
       text-align: center;
-      font-size: .7rem;
-      color: #64748b;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-links {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .copyright {
+      color: var(--text-dim);
+      font-size: 0.8rem;
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <h1>AJP - All Jobs Preparation App</h1>
-    <span class="badge">Early Access • Beta</span>
 
-    <p>
-      AJP App is an educational Android application designed to support
-      students for jobs preparations of PAF, ASF, Navy, PPSC, FPSC, ASI, other MCQs Jobs and productivity tools in Pakistan.
-      This is an early access beta release for testing and feedback.
-    </p>
-
-    <!-- 🔁 UPDATE THIS LINK FOR EACH RELEASE -->
-    <a class="download"
-       href="https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk">
-       ⬇ Download Beta APK
-    </a>
-
-    <div class="meta">
-      Android 8.0+ required • Manual installation needed<br>
-      Version: v0.1.0-beta
+  <header>
+    <a href="#" class="logo">AJP.</a>
+    <div class="header-action">
+      <span style="font-size: 0.8rem; color: var(--text-dim);">Latest: v0.1.0-beta</span>
     </div>
+  </header>
 
-    <footer>
-      © 2026 Matti Ullah Khan • Proprietary Software<br>
-      Not affiliated with Google or Android
-    </footer>
+  <main>
+    <section class="hero">
+      <article class="app-content">
+        <span class="app-badge">Official Beta Release</span>
+        <h1>All Jobs Preparation</h1>
+        <p class="description">
+          The ultimate Android companion for Pakistani students. Prepare for <strong>PAF, ASF, Navy, PPSC, and FPSC</strong> with precision-crafted MCQs and study materials.
+        </p>
+
+        <div class="cta-group">
+          <a href="https://github.com/MattiUllahKhan/alljobspreparation/releases/download/v0.1.0-beta/AJP-v0.1.0-beta.apk" class="btn-main">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Beta APK
+          </a>
+          <span style="font-size: 0.85rem; color: var(--text-dim);">Android 8.0+ Required</span>
+        </div>
+
+        <div class="app-specs">
+          <div class="spec-item">
+            <span class="spec-label">Category</span>
+            <span class="spec-value">Education</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Size</span>
+            <span class="spec-value">15.2 MB</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Rating</span>
+            <span class="spec-value">5.0 ★</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="mockup-container">
+        <div class="mockup-placeholder">
+          [ AJP APP PREVIEW ]
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="grid">
+        <div class="card">
+          <h3>Forces Preparation</h3>
+          <p>Get instant access to initial test preparations for the Pakistan Air Force, Navy, and Airport Security Force.</p>
+        </div>
+        <div class="card">
+          <h3>Civil Services</h3>
+          <p>Updated MCQ banks for PPSC and FPSC competitive exams, designed by academic experts.</p>
+        </div>
+        <div class="card">
+          <h3>Early Access</h3>
+          <p>As a beta tester, your feedback directly influences the final features and tools of the AJP ecosystem.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Release Notes</a>
+      <a href="https://github.com/MattiUllahKhan">GitHub</a>
+      <a href="#">Contact Developer</a>
+    </div>
+    <div class="copyright">
+      © 2026 Matti Ullah Khan. Built with Google Material Design principles.<br>
+      Not an official government application.
+    </div>
+  </footer>
+
 </body>
 </html>
