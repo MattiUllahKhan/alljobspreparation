@@ -1,4 +1,4 @@
-# Student App – Beta (Early Access)
+# All Jobs Preparation (AJP) – Beta (Early Access)
 
 This repository provides **early access beta APK releases** of the Student App.
 
